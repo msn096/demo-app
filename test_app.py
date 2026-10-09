@@ -5,7 +5,7 @@ def test_add():
 def test_add_negative():
  assert add(-1, -1) == -2
 def test_divide():
-assert divide(10, 2) == 5
+ assert divide(10, 2) == 5
 def test_divide_by_zero():
  with pytest.raises(ValueError):
  divide(1, 0)
