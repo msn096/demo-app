@@ -19,8 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                // sh './venv/bin/python -m py_compile app.py'
-                sh './venv/bin/pytest --junitxml=result.xml
-                --cov=. --cov-report=xml:coverage.xml --cov-report=term'
+                sh './venv/bin/pytest --junitxml=result.xml --cov=. --cov-report=xml:coverage.xml --cov-report=term'
             }
         }
         stage('Test') {
